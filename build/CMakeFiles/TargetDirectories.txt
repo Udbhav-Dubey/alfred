@@ -1,0 +1,3 @@
+/home/kakarot/Documents/alfred/build/CMakeFiles/journal.dir
+/home/kakarot/Documents/alfred/build/CMakeFiles/edit_cache.dir
+/home/kakarot/Documents/alfred/build/CMakeFiles/rebuild_cache.dir
