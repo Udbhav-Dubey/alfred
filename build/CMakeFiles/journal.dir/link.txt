@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/journal.dir/link.d CMakeFiles/journal.dir/src/main.cpp.o CMakeFiles/journal.dir/src/intro.cpp.o CMakeFiles/journal.dir/src/journal.cpp.o -o journal
