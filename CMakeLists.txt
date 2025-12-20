@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(journal
+project(alfred
     VERSION 1.0
     LANGUAGES CXX
 )
@@ -13,9 +13,10 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Good default warnings
 add_compile_options(-Wall -Wextra -Wpedantic)
 
-add_executable(journal
+add_executable(alfred
     src/main.cpp
     src/intro.cpp
     src/journal.cpp
+    src/habits.cpp
 )
 

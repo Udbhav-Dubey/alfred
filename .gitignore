@@ -1,3 +1,4 @@
 build/
 data/journal.txt
-
+data/habits.txt
+data/habits_log.csv
