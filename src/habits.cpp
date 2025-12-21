@@ -196,7 +196,7 @@ void habitStore::saveData(
         csv<<"# habits-hash: " << currentHash << "\n";
         csv<<"date";
         for (const auto&h:habit_names){
-            csv<<","<<h;
+            csv<<",\""<<h<<"\"";
         }
     csv<<"\n";
     }
