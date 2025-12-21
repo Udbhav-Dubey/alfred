@@ -1,101 +1,140 @@
 # Alfred
 
-Alfred is a **personal terminal-based tracker** designed to help you reflect, stay consistent, and observe progress over time.
+Alfred is a **personal, terminal-based reflection tool**.
 
-At its core, Alfred is intentionally simple:
-- write about your day
-- track your habits
-- look back at your recent progress
+It is designed to be used **once a day**, at the end of the day, and to take **no more than a few minutes**.
 
-No accounts, no cloud, no noise — just a local tool that lives in your terminal.
+No accounts.  
+No cloud.  
+No analytics.  
+No pressure.
+
+Just a quiet place in your terminal to close the day honestly.
 
 ---
 
-## Purpose
+## What Alfred Is
 
-The purpose of Alfred is to combine **journaling** and **habit tracking** into a single, minimal workflow.
+Alfred is a **daily closing ritual**, not a productivity system.
 
-The idea is straightforward:
+It helps you:
+- write a short journal entry
+- mark whether you followed your habits today
+- reflect briefly before ending the day
+
+Alfred does not try to optimize you.  
+It simply records what happened.
+
+---
+
+## Core Workflow (v1)
+
+Alfred follows the same flow every day:
 
 1. **Journal**  
    Write freely about your day — thoughts, events, reflections.
 
-2. **Track habits**  
-   Mark whether you followed specific habits for the day.
+2. **Habit logging**  
+   Answer simple yes/no questions for your habits.
 
-3. **View progress**  
-   See a summary of your habit consistency over the **last 15 days**.
+3. **Exit**  
+   A random quote is shown as a closing thought.
 
 That’s it.
 
-The goal is not productivity theatrics, but **awareness and consistency**.
+There are no streaks, deadlines, reminders, or scores in v1.
 
 ---
 
-## Current State
+## Design Principles
 
-Alfred is in a **very early stage of development**.
+Alfred is built around a few strict principles:
 
-Right now:
-- Core journaling functionality exists
-- Data is stored locally
-- The interface is minimal and terminal-based
-- The project is written specifically for the **Linux terminal**
+- **Local-first**  
+  All data lives on your machine.
 
-There is **no stable release yet**.  
-Expect breaking changes, refactors, and missing features.
+- **Low friction**  
+  The entire flow is designed to take under 5 minutes.
 
----
+- **No pressure mechanics**  
+  No streaks, no alarms, no failure states.
 
-## Planned Direction
+- **Honest reflection over optimization**  
+  Alfred records reality instead of judging it.
 
-Over time, Alfred is intended to become more customizable while staying lightweight.
-
-Planned ideas include:
-- configurable habits
-- customizable time windows
-- visual summaries (graphs, streaks, trends)
-- improved terminal UI
-- cleaner separation between data and interface
-
-These are **future goals**, not guarantees.
+- **Terminal-native**  
+  Built for people who live in their terminal.
 
 ---
 
-## Philosophy
+## Current Features (v1)
 
-- Local-first
-- No tracking, no telemetry
-- Personal data stays personal
-- Simple workflows over feature bloat
-- Built for daily use, not demos
+- Daily journaling
+- Daily habit logging (binary: yes / no)
+- Configurable habits via a local file
+- Local CSV-based data storage
+- Menu-driven terminal interface
+- Random quote displayed on exit
 
 ---
 
-## Platform
+## What Alfred Is *Not*
+
+Alfred is intentionally **not**:
+
+- a task manager
+- a deadline tracker
+- a productivity dashboard
+- a gamified habit app
+- a replacement for external services (e.g. LeetCode, calendars)
+
+If a metric is already obvious or tracked elsewhere, Alfred does not repeat it.
+
+---
+
+## Platform & Build
 
 - Designed for **Linux**
-- Built for use in a terminal environment
-- Other platforms are not a priority at the moment
+- Built as a **terminal application**
+- Written in C++
+- Built using CMake
+
+Other platforms are not a priority.
 
 ---
 
-## Repository Notes
+## Data & Privacy
 
-- Build artifacts are intentionally ignored
-- Personal runtime data is not tracked
-- The `data/` directory is meant for local, private user data only
+- No telemetry
+- No tracking
+- No network access
+- No external dependencies
+
+All runtime data lives in the local `data/` directory and is ignored by git.
 
 See `data/README.md` for details.
 
 ---
 
-## Status
+## Project Status
 
-This project is experimental and personal by nature.
+Alfred v1 is complete.
 
-If you find it useful — great.  
-If not — that’s okay too.
+The project is personal and experimental by nature.
+Future versions may add features, but only if they align with the core philosophy.
 
-The primary goal is to build something that is **used**, not just written.
+Stability, simplicity, and daily usability come first.
+
+---
+
+## Why Alfred Exists
+
+Alfred exists to answer one simple question:
+
+> *“Did today align with how I want to live?”*
+
+Once that question is answered, the day is over.
+
+Close the terminal.  
+Move on.
 
