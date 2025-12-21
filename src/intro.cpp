@@ -49,8 +49,8 @@ void intro::writingStyle(const std::string &text){
 void intro::show(){
     clearscreen();
     std::cout << batman_ascii<<std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(600));
-    writingStyle("Welcome Master Bruce ");
+    std::this_thread::sleep_for(std::chrono::milliseconds(400));
+    writingStyle("Welcome Sir ");
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     std::cout << "\npress enter to continue ";
     std::cin.ignore();

@@ -18,5 +18,7 @@ add_executable(alfred
     src/intro.cpp
     src/journal.cpp
     src/habits.cpp
+    src/menu.cpp
+    src/quotes.cpp
 )
 
