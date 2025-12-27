@@ -17,6 +17,7 @@ class habitStore{
     std::optional <std::string>getLastSchemaHash() const;
 };
 namespace habits {
+    std::string trim(const std::string&s);
     void getEntries();
     std::string getCurrentDate();
     std::map<std::string,int> date_to_habits(

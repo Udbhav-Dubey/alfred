@@ -3,6 +3,7 @@
 #include "intro.h"
 #include "menu.h"
 #include "quotes.h"
+#include "heatmap.h"
 #include <iostream>
 // for now let editHabits stay here in future we will make it better currently just opens my editor;
 // might make funcion to let people open theirs or make it nano 
@@ -16,7 +17,8 @@ void menu::ui(){
     std::cout << 
         "1: Journal->habit Logging\n"
         "2: Edit Habits\n"
-        "3: Exit \n";
+        "3: Heatmap\n"
+        "4: Exit \n";
 }
 void menu::run(){
     while(true){
@@ -30,7 +32,9 @@ void menu::run(){
                      break;
             case 2 : editHabits();
                      break;
-            case 3 : flag=0;
+            case 3:  heatmap::display();
+                     break;
+            case 4 : flag=0;
                      quotes::showRandom();
                      break;
             default: std::cout << "invalid , are you dumb or something\n";

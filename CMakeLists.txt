@@ -20,5 +20,6 @@ add_executable(alfred
     src/habits.cpp
     src/menu.cpp
     src/quotes.cpp
+    src/heatmap.cpp
 )
 

@@ -24,6 +24,7 @@ void journal::entry(){
     std::cout<<"═══════════════════════════════════\n\n";
     std::string journal_text;
     std::string line;
+    std::cout << "type :next to go to next section please \n";
     while(getline(std::cin,line)){
         if (line==":next"){
             break;

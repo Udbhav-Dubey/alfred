@@ -34,7 +34,7 @@ void habitStore::ensureHabitFile(){
         }
     }
 }
-static std::string trim(const std::string&s){
+std::string habits::trim(const std::string&s){
     const std::string whitespace =" \t\r\n";
     size_t start=s.find_first_not_of(whitespace);
     if (start==std::string::npos){
@@ -47,7 +47,7 @@ std::string habitStore::computeHabitHash() const{
     std::vector<std::string> habitList=habitNames();
     std::vector<std::string> normalised;
     for (const auto &it : habitList){
-        std::string s=trim(it);
+        std::string s=habits::trim(it);
         std::transform(s.begin(),s.end(),s.begin(),[](unsigned char c){return std::tolower(c);});
         if (!s.empty()){
         normalised.push_back(s);
@@ -68,7 +68,7 @@ std::vector<std::string> habitStore::habitNames() const {
     std::ifstream in("data/habits.txt");
     std::string line;
     while(std::getline(in,line)){
-        std::string cleaned=trim(line);
+        std::string cleaned=habits::trim(line);
         if (!cleaned.empty()){
             result.push_back(cleaned);
         }
@@ -86,7 +86,7 @@ std::optional<std::string> habitStore::getLastSchemaHash() const {
     while(std::getline(csv,line)){
         if (line.rfind(prefix,0)==0){
             std::string hash=line.substr(prefix.size());
-            lasthash=trim(hash);
+            lasthash=habits::trim(hash);
         }
     }
     return lasthash;
