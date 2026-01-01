@@ -95,7 +95,7 @@ void heatmap::display(){
                 }
             }
         }
-        std::cout << "\n\n";
+        std::cout << "\n";
     }
     std::cout << " ■ = 1  □ = 0 \n";
     std::cout << "Days logged : " << block.data.size() << "\n\n";

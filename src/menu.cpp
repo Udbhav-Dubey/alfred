@@ -28,6 +28,7 @@ void menu::run(){
         std::cin >>x;
         switch(x){
             case 1 : journal::entry();
+                     if (journal::flag==0){break;}
                      habits::getEntries();
                      break;
             case 2 : editHabits();

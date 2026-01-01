@@ -5,6 +5,9 @@
 #include <chrono>
 #include <sstream>
 #include <iomanip>
+namespace journal {
+    bool flag = true;
+}
 std::string journal::getDate(){
     using namespace std::chrono;
     auto now =system_clock::now();
@@ -25,8 +28,13 @@ void journal::entry(){
     std::string journal_text;
     std::string line;
     std::cout << "type :next to go to next section please \n";
+    std::cout << "type :back to go back to menu\n";
     while(getline(std::cin,line)){
         if (line==":next"){
+            break;
+        }
+        if (line==":back"){
+            flag=0; 
             break;
         }
         journal_text+=line+"\n";
