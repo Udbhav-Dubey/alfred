@@ -90,9 +90,9 @@ void heatmap::display(){
             if (it!=habits.end()){
                 std::cout << (it->second==1?"■" : "□");
                 count++;
-                if (count%7==0){
+               /* if (count%7==0){
                     std::cout << "\n";
-                }
+                }*/
             }
         }
         std::cout << "\n";
