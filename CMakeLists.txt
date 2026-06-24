@@ -5,12 +5,12 @@ project(alfred
     LANGUAGES CXX
 )
 
-# Tell CMake: we want C++20
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Good default warning
+add_executable(alfred
+    src/main.cpp
     src/intro.cpp
     src/journal.cpp
     src/habits.cpp
@@ -18,4 +18,3 @@ set(CMAKE_CXX_EXTENSIONS OFF)
     src/quotes.cpp
     src/heatmap.cpp
 )
-
