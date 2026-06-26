@@ -18,6 +18,7 @@ Just a quiet place in your terminal to close the day honestly.
 Alfred is a **daily closing ritual**, not a productivity system.
 
 It helps you:
+
 - write a short journal entry
 - mark whether you followed your habits today
 - reflect briefly before ending the day
@@ -40,9 +41,27 @@ Alfred follows the same flow every day:
 3. **Exit**  
    A random quote is shown as a closing thought.
 
-That’s it.
+That's it.
 
 There are no streaks, deadlines, reminders, or scores in v1.
+
+---
+
+## What's Coming (v2)
+
+v2 extends Alfred without changing what it is.
+
+The terminal ritual stays exactly the same. Two things are being added underneath:
+
+**SQLite storage**  
+CSV is being replaced with a local SQLite database. Same data, better structure. No external server, no change to how Alfred feels to use — just a proper foundation.
+
+**Android companion app**  
+A minimal Android app for quick journal capture when you're away from your terminal. One text field. One save button. One sync.
+
+The phone is not a replacement for Alfred. It's a longer arm — a way to write something down in the moment so it's there when you sit down at night.
+
+Sync happens over LAN. No internet required. No accounts. Still local-first.
 
 ---
 
@@ -64,6 +83,8 @@ Alfred is built around a few strict principles:
 
 - **Terminal-native**  
   Built for people who live in their terminal.
+
+These principles carry into v2. The Android app is input-only. The SQLite migration is invisible at the surface. Nothing about the daily ritual changes.
 
 ---
 
@@ -107,10 +128,11 @@ Other platforms are not a priority.
 
 - No telemetry
 - No tracking
-- No network access
 - No external dependencies
 
 All runtime data lives in the local `data/` directory and is ignored by git.
+
+In v2, data is stored in a local SQLite database (`data/alfred.db`). The Android app syncs over LAN only — nothing leaves your network.
 
 See `data/README.md` for details.
 
@@ -120,8 +142,9 @@ See `data/README.md` for details.
 
 Alfred v1 is complete.
 
-The project is personal and experimental by nature.
-Future versions may add features, but only if they align with the core philosophy.
+v2 is in planning. See open issues for what's being worked on.
+
+The project is personal and experimental by nature. Features are only added if they align with the core philosophy.
 
 Stability, simplicity, and daily usability come first.
 
@@ -131,10 +154,9 @@ Stability, simplicity, and daily usability come first.
 
 Alfred exists to answer one simple question:
 
-> *“Did today align with how I want to live?”*
+> *"Did today align with how I want to live?"*
 
 Once that question is answered, the day is over.
 
 Close the terminal.  
 Move on.
-
