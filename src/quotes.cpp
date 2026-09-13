@@ -1,9 +1,17 @@
 #include "quotes.h"
 #include <fstream>
+#include <thread>
 #include <vector>
 #include <string>
 #include <iostream>
 #include <cstdlib>
+size_t len{};
+void quotes::showall(){
+    while(true){
+    showRandom();  
+    std::this_thread::sleep_for(std::chrono::milliseconds(len*82));
+    }
+}
 void quotes::showRandom(){
     std::ifstream in("data/quotes.txt");
     if (!in){
@@ -46,5 +54,6 @@ if (quotes.empty()){
 }
 system("clear");
 int idx=std::rand()%quotes.size();
+len=quotes[idx].size();
 std::cout << "\n\n" << quotes[idx]<<"\n\n";
 }

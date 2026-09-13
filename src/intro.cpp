@@ -58,9 +58,9 @@ void intro::writingStyle(const std::string &text){
 void intro::show(){
     clearscreen();
     std::cout << batman_ascii<<std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(400));
-    writingStyle("Welcome Sir ");
-    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    writingStyle("better to burn out than fade away \n");
+    std::this_thread::sleep_for(std::chrono::milliseconds(150));
     std::cout << "\npress enter to continue ";
     std::cin.ignore();
     clearscreen();

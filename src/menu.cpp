@@ -19,6 +19,7 @@ void menu::ui(){
         "2: Edit Habits\n"
         "3: Heatmap\n"
         "4: Exit \n";
+        "5: randominator\n";
 }
 void menu::run(){
     while(true){
@@ -37,6 +38,8 @@ void menu::run(){
                      break;
             case 4 : flag=0;
                      quotes::showRandom();
+                     break;
+            case 5 : quotes::showall();
                      break;
             default: std::cout << "invalid , are you dumb or something\n";
         }
